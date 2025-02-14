@@ -1,14 +1,12 @@
 package com.example.expertcourse
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.expertcourse.game.GamePage
 
 import org.junit.Test
 import org.junit.runner.RunWith
 
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 
@@ -22,7 +20,7 @@ class ScenarioTest {
 
     @Before
     fun setup(){
-        gamePage = GamePage(word = "animal".reversed())
+        gamePage = GamePage(word = "animal".reversed(), R = R)
     }
 
     /**

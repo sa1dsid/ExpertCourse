@@ -2,10 +2,9 @@ package com.example.expertcourse.game
 
 import android.view.View
 import android.widget.LinearLayout
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.material3.Button
 import org.hamcrest.Matcher
 import androidx.test.espresso.matcher.ViewMatchers.*
+import com.example.expertcourse.R
 
 class GamePage(word: String) {
 
@@ -25,14 +24,15 @@ class GamePage(word: String) {
 
     private val skipUi = ButtonUi(
         id = R.id.skipButton,
-        colorHex = '#FFF100',
+        colorHex = "#FFF100",
         textResId = R.string.skip,
         containerIdMatcher = containerIdMatcher,
         containerClassTypeMatcher = containerClassTypeMatcher)
 
+
     private val nextUi = ButtonUi(
         id = R.id.nextButton,
-        colorHex = '#3BE6FA',
+        colorHex = "#3BE6FA",
         textResId = R.string.next,
         containerIdMatcher = containerIdMatcher,
         containerClassTypeMatcher = containerClassTypeMatcher)
@@ -41,7 +41,6 @@ class GamePage(word: String) {
         containerIdMatcher = containerIdMatcher,
         containerClassTypeMatcher = containerClassTypeMatcher
     )
-    //endregions
 
     fun assertInitialState() {
         shuffleWord.assertTextVisible()
