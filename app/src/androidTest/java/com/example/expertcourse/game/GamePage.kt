@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.LinearLayout
 import org.hamcrest.Matcher
 import androidx.test.espresso.matcher.ViewMatchers.*
+import com.example.expertcourse.R
 
 class GamePage(word: String) {
 
@@ -28,6 +29,7 @@ class GamePage(word: String) {
         containerIdMatcher = containerIdMatcher,
         containerClassTypeMatcher = containerClassTypeMatcher)
 
+
     private val nextUi = ButtonUi(
         id = R.id.nextButton,
         colorHex = "#3BE6FA",
@@ -39,7 +41,6 @@ class GamePage(word: String) {
         containerIdMatcher = containerIdMatcher,
         containerClassTypeMatcher = containerClassTypeMatcher
     )
-    //endregions
 
     fun assertInitialState() {
         shuffleWord.assertTextVisible()
